@@ -10,7 +10,7 @@ export function cellAnchor(index: number) {
   return { x: BOARD.x + (683 + (col - 1.5) * (220 + row * 16)) * BOARD.width / BOARD.sourceWidth,
     y: BOARD.y + (320 + row * 180) * BOARD.height / BOARD.sourceHeight, width: 164 + row * 9 };
 }
-interface Animation { before: Observation; after: Observation; action: Action; start: number; duration: number; resolve: () => void }
+interface Animation { before: Observation; after: Observation; action: Action; start: number; duration: number; resolve: (completed: boolean) => void }
 interface Bounds { x: number; y: number; width: number; height: number }
 
 function cellBounds(index: number) {
@@ -64,12 +64,12 @@ export class BoardRenderer {
   get busy() { return this.animation !== null; }
   get reducedMotion() { return this.reduceMotion; }
   cancelAnimation() {
-    if (this.animation) { const resolve = this.animation.resolve; this.animation = null; resolve(); }
+    if (this.animation) { const resolve = this.animation.resolve; this.animation = null; resolve(false); }
     cancelAnimationFrame(this.frame); this.draw();
   }
   advanceTime(ms: number) { this.offset += Math.max(0, ms); this.draw(); }
 
-  animate(before: Observation, after: Observation, action: Action): Promise<void> {
+  animate(before: Observation, after: Observation, action: Action): Promise<boolean> {
     this.cancelAnimation();
     this.observation = after; this.selected = null;
     return new Promise(resolve => {
@@ -197,7 +197,7 @@ export class BoardRenderer {
       if (this.focusCell !== null) this.ring(this.focusCell, '#fff6b9');
     }
     if (animation) {
-      if (progress >= 1) { this.animation = null; this.draw(); animation.resolve(); }
+      if (progress >= 1) { this.animation = null; this.draw(); animation.resolve(true); }
       else this.frame = requestAnimationFrame(this.draw);
     }
   };

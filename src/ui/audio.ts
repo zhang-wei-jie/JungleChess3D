@@ -1,13 +1,44 @@
+import type { Rank } from '../game/types';
+import { synthesizeAnimalCall } from './animal-calls';
+
 export class GameAudio {
-  enabled: boolean;
+  private soundEnabled: boolean;
+  private animalSource: AudioBufferSourceNode | null = null;
+  private animalBuffers = new Map<Rank, AudioBuffer>();
+  get enabled() { return this.soundEnabled; }
+  set enabled(value: boolean) { this.soundEnabled = value; if (!value) this.stopAnimal(); }
   private context: AudioContext | null = null;
-  constructor(enabled: boolean) { this.enabled = enabled; }
+  constructor(enabled: boolean) { this.soundEnabled = enabled; }
   unlock() {
     if (!this.enabled) return;
     try {
       this.context ??= new AudioContext();
       if (this.context.state === 'suspended') void this.context.resume().catch(() => undefined);
     } catch { /* 无音频设备时仍保留完整棋局操作。 */ }
+  }
+  stopAnimal() {
+    if (!this.animalSource) return;
+    this.animalSource.stop(); this.animalSource.disconnect(); this.animalSource = null;
+  }
+  playAnimal(rank: Rank) {
+    if (!this.enabled) return;
+    this.unlock();
+    const ctx = this.context;
+    if (!ctx || ctx.state !== 'running') return;
+    try {
+      this.stopAnimal();
+      let buffer = this.animalBuffers.get(rank);
+      if (!buffer) {
+        const samples = synthesizeAnimalCall(rank, ctx.sampleRate);
+        buffer = ctx.createBuffer(1, samples.length, ctx.sampleRate);
+        buffer.getChannelData(0).set(samples);
+        this.animalBuffers.set(rank, buffer);
+      }
+      const source = ctx.createBufferSource();
+      source.buffer = buffer; source.connect(ctx.destination);
+      source.onended = () => { source.disconnect(); if (this.animalSource === source) this.animalSource = null; };
+      this.animalSource = source; source.start();
+    } catch { /* Audio failures must never interrupt a turn. */ }
   }
   play(kind: 'flip' | 'move' | 'capture' | 'mutual' | 'win' | 'lose' | 'draw') {
     if (!this.enabled) return;

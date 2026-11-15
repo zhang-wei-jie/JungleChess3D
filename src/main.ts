@@ -150,13 +150,13 @@ function renderUI() {
 
 function stopAI() { ai.cancel(); aiRunning = false; }
 function startGame(state?: GameState) {
-  stopAI(); renderer.cancelAnimation(); closeDialog(false);
+  audio.stopAnimal(); stopAI(); renderer.cancelAnimation(); closeDialog(false);
   session = new GameSession(state); selected = null; announcedResult = false;
   lastMoveText = '翻开一张，遇见你的森林伙伴';
   renderUI(); resumeGame();
 }
 function goHome() {
-  stopAI(); renderer.cancelAnimation(); closeDialog(false);
+  audio.stopAnimal(); stopAI(); renderer.cancelAnimation(); closeDialog(false);
   session = null; selected = null; renderUI();
   document.querySelector<HTMLButtonElement>('#start-button')!.focus({ preventScroll: true });
 }
@@ -190,8 +190,12 @@ async function perform(action: Action, actor: 'human' | 'computer') {
   }
   audio.play(sound);
   const animation = renderer.animate(before, observe(current.state), action);
-  renderUI(); await animation;
+  renderUI(); const completed = await animation;
   if (session !== current || current.revision !== revision) return;
+  if (completed && action.type === 'flip' && !document.hidden) {
+    const revealed = current.state.board[action.at];
+    if (revealed?.revealed) audio.playAnimal(revealed.piece.rank);
+  }
   renderUI(); resumeGame();
 }
 
@@ -307,7 +311,7 @@ function installEvents() {
       case 'confirm-exit': goHome(); break;
       case 'confirm-restart': startGame(); break;
       case 'undo':
-        if (session?.canUndo) { stopAI(); renderer.cancelAnimation(); session.undo(); selected = null; lastMoveText = '回到上一步，再想一想'; renderUI(); toast(`已悔棋，还剩 ${session.undosLeft} 次机会`); }
+        if (session?.canUndo) { audio.stopAnimal(); stopAI(); renderer.cancelAnimation(); session.undo(); selected = null; lastMoveText = '回到上一步，再想一想'; renderUI(); toast(`已悔棋，还剩 ${session.undosLeft} 次机会`); }
         break;
       case 'cell': interact(Number(button.dataset.cell)); break;
     }
@@ -333,7 +337,7 @@ function installEvents() {
     event.preventDefault(); if (modalKind !== 'result' && modalKind !== 'ai-error') closeDialog();
   });
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden) { stopAI(); renderer.cancelAnimation(); }
+    if (document.hidden) { audio.stopAnimal(); stopAI(); renderer.cancelAnimation(); }
     else { renderUI(); resumeGame(); }
   });
   document.addEventListener('keydown', event => {
