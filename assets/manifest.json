@@ -1,0 +1,372 @@
+[
+  {
+    "file": "forest.webp",
+    "source": "薄荷童话林间空地-6.png",
+    "crop": null
+  },
+  {
+    "file": "board.webp",
+    "source": "无格薄荷绿木框棋盘.png",
+    "crop": null
+  },
+  {
+    "file": "cell-slot.webp",
+    "source": "薄荷森林四乘四棋盘-2.png",
+    "crop": {
+      "left": 470,
+      "top": 160,
+      "width": 215,
+      "height": 170
+    }
+  },
+  {
+    "file": "lobby-animals.webp",
+    "source": "斗兽棋森林大厅-9.png",
+    "crop": {
+      "left": 0,
+      "top": 410,
+      "width": 941,
+      "height": 700
+    }
+  },
+  {
+    "file": "red-8.webp",
+    "source": "八只萌趣动物玩偶图鉴-1.png",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 443,
+      "height": 443
+    }
+  },
+  {
+    "file": "red-7.webp",
+    "source": "八只萌趣动物玩偶图鉴-1.png",
+    "crop": {
+      "left": 443,
+      "top": 0,
+      "width": 444,
+      "height": 443
+    }
+  },
+  {
+    "file": "red-6.webp",
+    "source": "八只萌趣动物玩偶图鉴-1.png",
+    "crop": {
+      "left": 887,
+      "top": 0,
+      "width": 443,
+      "height": 443
+    }
+  },
+  {
+    "file": "red-5.webp",
+    "source": "八只萌趣动物玩偶图鉴-1.png",
+    "crop": {
+      "left": 1330,
+      "top": 0,
+      "width": 444,
+      "height": 443
+    }
+  },
+  {
+    "file": "red-4.webp",
+    "source": "八只萌趣动物玩偶图鉴-1.png",
+    "crop": {
+      "left": 0,
+      "top": 443,
+      "width": 443,
+      "height": 444
+    }
+  },
+  {
+    "file": "red-3.webp",
+    "source": "八只萌趣动物玩偶图鉴-1.png",
+    "crop": {
+      "left": 443,
+      "top": 443,
+      "width": 444,
+      "height": 444
+    }
+  },
+  {
+    "file": "red-2.webp",
+    "source": "八只萌趣动物玩偶图鉴-1.png",
+    "crop": {
+      "left": 887,
+      "top": 443,
+      "width": 443,
+      "height": 444
+    }
+  },
+  {
+    "file": "red-1.webp",
+    "source": "八只萌趣动物玩偶图鉴-1.png",
+    "crop": {
+      "left": 1330,
+      "top": 443,
+      "width": 444,
+      "height": 444
+    }
+  },
+  {
+    "file": "blue-8.webp",
+    "source": "蓝队八兽黏土图鉴-3.png",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 443,
+      "height": 443
+    }
+  },
+  {
+    "file": "blue-7.webp",
+    "source": "蓝队八兽黏土图鉴-3.png",
+    "crop": {
+      "left": 443,
+      "top": 0,
+      "width": 444,
+      "height": 443
+    }
+  },
+  {
+    "file": "blue-6.webp",
+    "source": "蓝队八兽黏土图鉴-3.png",
+    "crop": {
+      "left": 887,
+      "top": 0,
+      "width": 443,
+      "height": 443
+    }
+  },
+  {
+    "file": "blue-5.webp",
+    "source": "蓝队八兽黏土图鉴-3.png",
+    "crop": {
+      "left": 1330,
+      "top": 0,
+      "width": 444,
+      "height": 443
+    }
+  },
+  {
+    "file": "blue-4.webp",
+    "source": "蓝队八兽黏土图鉴-3.png",
+    "crop": {
+      "left": 0,
+      "top": 443,
+      "width": 443,
+      "height": 444
+    }
+  },
+  {
+    "file": "blue-3.webp",
+    "source": "蓝队八兽黏土图鉴-3.png",
+    "crop": {
+      "left": 443,
+      "top": 443,
+      "width": 444,
+      "height": 444
+    }
+  },
+  {
+    "file": "blue-2.webp",
+    "source": "蓝队八兽黏土图鉴-3.png",
+    "crop": {
+      "left": 887,
+      "top": 443,
+      "width": 443,
+      "height": 444
+    }
+  },
+  {
+    "file": "blue-1.webp",
+    "source": "蓝队八兽黏土图鉴-3.png",
+    "crop": {
+      "left": 1330,
+      "top": 443,
+      "width": 444,
+      "height": 444
+    }
+  },
+  {
+    "file": "avatars-8.webp",
+    "source": "透明背景的八种动物头像-11.png",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 443,
+      "height": 443
+    }
+  },
+  {
+    "file": "avatars-7.webp",
+    "source": "透明背景的八种动物头像-11.png",
+    "crop": {
+      "left": 443,
+      "top": 0,
+      "width": 444,
+      "height": 443
+    }
+  },
+  {
+    "file": "avatars-6.webp",
+    "source": "透明背景的八种动物头像-11.png",
+    "crop": {
+      "left": 887,
+      "top": 0,
+      "width": 443,
+      "height": 443
+    }
+  },
+  {
+    "file": "avatars-5.webp",
+    "source": "透明背景的八种动物头像-11.png",
+    "crop": {
+      "left": 1330,
+      "top": 0,
+      "width": 444,
+      "height": 443
+    }
+  },
+  {
+    "file": "avatars-4.webp",
+    "source": "透明背景的八种动物头像-11.png",
+    "crop": {
+      "left": 0,
+      "top": 443,
+      "width": 443,
+      "height": 444
+    }
+  },
+  {
+    "file": "avatars-3.webp",
+    "source": "透明背景的八种动物头像-11.png",
+    "crop": {
+      "left": 443,
+      "top": 443,
+      "width": 444,
+      "height": 444
+    }
+  },
+  {
+    "file": "avatars-2.webp",
+    "source": "透明背景的八种动物头像-11.png",
+    "crop": {
+      "left": 887,
+      "top": 443,
+      "width": 443,
+      "height": 444
+    }
+  },
+  {
+    "file": "avatars-1.webp",
+    "source": "透明背景的八种动物头像-11.png",
+    "crop": {
+      "left": 1330,
+      "top": 443,
+      "width": 444,
+      "height": 444
+    }
+  },
+  {
+    "file": "back.webp",
+    "source": "森林翻牌四态方砖图集-4.png",
+    "crop": {
+      "left": 38,
+      "top": 116,
+      "width": 570,
+      "height": 480
+    }
+  },
+  {
+    "file": "tile-red.webp",
+    "source": "森林翻牌四态方砖图集-4.png",
+    "crop": {
+      "left": 638,
+      "top": 116,
+      "width": 570,
+      "height": 480
+    }
+  },
+  {
+    "file": "tile-blue.webp",
+    "source": "森林翻牌四态方砖图集-4.png",
+    "crop": {
+      "left": 38,
+      "top": 660,
+      "width": 570,
+      "height": 480
+    }
+  },
+  {
+    "file": "button-coral.webp",
+    "source": "温柔森林玩具棋UI图集-8.png",
+    "crop": {
+      "left": 10,
+      "top": 105,
+      "width": 312,
+      "height": 185
+    }
+  },
+  {
+    "file": "button-cream.webp",
+    "source": "温柔森林玩具棋UI图集-8.png",
+    "crop": {
+      "left": 626,
+      "top": 105,
+      "width": 312,
+      "height": 185
+    }
+  },
+  {
+    "file": "bubble.webp",
+    "source": "温柔森林玩具棋UI图集-8.png",
+    "crop": {
+      "left": 940,
+      "top": 343,
+      "width": 310,
+      "height": 200
+    }
+  },
+  {
+    "file": "icon-book.webp",
+    "source": "温柔森林玩具棋UI图集-8.png",
+    "crop": {
+      "left": 24,
+      "top": 621,
+      "width": 285,
+      "height": 273
+    }
+  },
+  {
+    "file": "icon-sound.webp",
+    "source": "温柔森林玩具棋UI图集-8.png",
+    "crop": {
+      "left": 337,
+      "top": 621,
+      "width": 285,
+      "height": 273
+    }
+  },
+  {
+    "file": "icon-settings.webp",
+    "source": "温柔森林玩具棋UI图集-8.png",
+    "crop": {
+      "left": 646,
+      "top": 621,
+      "width": 285,
+      "height": 273
+    }
+  },
+  {
+    "file": "icon-exit.webp",
+    "source": "温柔森林玩具棋UI图集-8.png",
+    "crop": {
+      "left": 955,
+      "top": 621,
+      "width": 285,
+      "height": 273
+    }
+  }
+]

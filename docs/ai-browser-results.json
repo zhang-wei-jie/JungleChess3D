@@ -1,0 +1,72 @@
+{
+  "browser": "157.0.8103.52",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "offline": true,
+  "checks": [
+    "beginner 首次 Worker 决策完成",
+    "beginner 暗格只输出 hidden",
+    "easy 首次 Worker 决策完成",
+    "easy 暗格只输出 hidden",
+    "normal 首次 Worker 决策完成",
+    "normal 暗格只输出 hidden",
+    "hard 首次 Worker 决策完成",
+    "hard 暗格只输出 hidden",
+    "expert 首次 Worker 决策完成",
+    "expert 暗格只输出 hidden",
+    "完整回合悔棋",
+    "思考中撤销首翻与阵营",
+    "过期专家结果不落入悔棋状态",
+    "专家计算没有阻塞界面响应",
+    "专家思考中规则弹窗响应",
+    "规则弹窗暂停对局",
+    "关闭弹窗恢复一次行动",
+    "思考中重开隔离旧结果",
+    "思考中退出不被旧结果重新开局",
+    "普通难度完整对局正常结算",
+    "结算后禁止悔棋",
+    "再来一局沿用难度",
+    "无页面或控制台异常",
+    "不依赖外部服务",
+    "离线期间无 HTTP 请求"
+  ],
+  "timings": [
+    {
+      "level": "beginner",
+      "firstTurnMs": 191.017333
+    },
+    {
+      "level": "easy",
+      "firstTurnMs": 198.081416
+    },
+    {
+      "level": "normal",
+      "firstTurnMs": 697.974459
+    },
+    {
+      "level": "hard",
+      "firstTurnMs": 2213.581125
+    },
+    {
+      "level": "expert",
+      "firstTurnMs": 5197.058583
+    },
+    {
+      "interaction": "expert-rules",
+      "responseMs": 16.084207999998398
+    }
+  ],
+  "fullGame": {
+    "humanMoves": 21,
+    "plies": 42,
+    "result": {
+      "winner": "computer",
+      "reason": "elimination"
+    }
+  },
+  "errors": [],
+  "external": [],
+  "requestsWhileOffline": []
+}

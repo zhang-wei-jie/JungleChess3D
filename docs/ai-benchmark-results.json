@@ -1,0 +1,436 @@
+{
+  "date": "2026-11-15",
+  "environment": {
+    "platform": "macOS arm64",
+    "node": "22.17.1"
+  },
+  "sourceSha256": {
+    "src/ai/evaluate.ts": "81479b4ae5dd5c1ae0a4fa8138be22a138f1c665c14fd91a00c7f58ebac9daf5",
+    "src/ai/search.ts": "a2ee9e0e3e432a33524cf7b8b52da27486153e01317480392b82b01ea9bcd876",
+    "src/game/types.ts": "9db0cc4a2edb8e96b17e82ff217cc16b4dfd86edc7c4ec62d9890eca890ee214",
+    "src/game/engine.ts": "0d5f08c81a662812d25e5d5031cb1de4dc1174dd059b06210fbf31eb6f72e768",
+    "tests/baselines/ai-v1.ts": "7b789ad721d0b8559fc2c4d39e2ac71c1bc3d8aaf7b79cd9bb6faa2cba403bcf"
+  },
+  "batches": [
+    {
+      "configuration": {
+        "pairs": 12,
+        "seedStart": 1101,
+        "difficulty": "hard",
+        "oldDifficulty": "hard",
+        "newTime": 150,
+        "oldTime": 150,
+        "node": "v22.17.1"
+      },
+      "stats": {
+        "wins": 10,
+        "losses": 6,
+        "draws": 8,
+        "truncated": 0,
+        "newMoves": 673,
+        "oldMoves": 670,
+        "newTime": 87605.71244900016,
+        "oldTime": 49788.35782599987,
+        "newMax": 163.38483299998916,
+        "oldMax": 151.09916599999997,
+        "scoreRate": 0.5833333333333334,
+        "newAverageMs": 130.17193528826175,
+        "oldAverageMs": 74.31098182985055,
+        "elapsedSeconds": 137.432779625
+      },
+      "games": [
+        {
+          "seed": 1101,
+          "newActor": "human",
+          "outcome": "wins",
+          "result": {
+            "winner": "human",
+            "reason": "elimination"
+          },
+          "plies": 43
+        },
+        {
+          "seed": 1101,
+          "newActor": "computer",
+          "outcome": "draws",
+          "result": {
+            "winner": null,
+            "reason": "quiet"
+          },
+          "plies": 74
+        },
+        {
+          "seed": 1102,
+          "newActor": "human",
+          "outcome": "wins",
+          "result": {
+            "winner": "human",
+            "reason": "elimination"
+          },
+          "plies": 81
+        },
+        {
+          "seed": 1102,
+          "newActor": "computer",
+          "outcome": "wins",
+          "result": {
+            "winner": "computer",
+            "reason": "elimination"
+          },
+          "plies": 44
+        },
+        {
+          "seed": 1103,
+          "newActor": "human",
+          "outcome": "draws",
+          "result": {
+            "winner": null,
+            "reason": "quiet"
+          },
+          "plies": 80
+        },
+        {
+          "seed": 1103,
+          "newActor": "computer",
+          "outcome": "losses",
+          "result": {
+            "winner": "human",
+            "reason": "blocked"
+          },
+          "plies": 19
+        },
+        {
+          "seed": 1104,
+          "newActor": "human",
+          "outcome": "draws",
+          "result": {
+            "winner": null,
+            "reason": "quiet"
+          },
+          "plies": 64
+        },
+        {
+          "seed": 1104,
+          "newActor": "computer",
+          "outcome": "wins",
+          "result": {
+            "winner": "computer",
+            "reason": "elimination"
+          },
+          "plies": 52
+        },
+        {
+          "seed": 1105,
+          "newActor": "human",
+          "outcome": "draws",
+          "result": {
+            "winner": null,
+            "reason": "quiet"
+          },
+          "plies": 50
+        },
+        {
+          "seed": 1105,
+          "newActor": "computer",
+          "outcome": "losses",
+          "result": {
+            "winner": "human",
+            "reason": "elimination"
+          },
+          "plies": 49
+        },
+        {
+          "seed": 1106,
+          "newActor": "human",
+          "outcome": "losses",
+          "result": {
+            "winner": "computer",
+            "reason": "elimination"
+          },
+          "plies": 54
+        },
+        {
+          "seed": 1106,
+          "newActor": "computer",
+          "outcome": "wins",
+          "result": {
+            "winner": "computer",
+            "reason": "elimination"
+          },
+          "plies": 44
+        },
+        {
+          "seed": 1107,
+          "newActor": "human",
+          "outcome": "draws",
+          "result": {
+            "winner": null,
+            "reason": "quiet"
+          },
+          "plies": 69
+        },
+        {
+          "seed": 1107,
+          "newActor": "computer",
+          "outcome": "losses",
+          "result": {
+            "winner": "human",
+            "reason": "elimination"
+          },
+          "plies": 33
+        },
+        {
+          "seed": 1108,
+          "newActor": "human",
+          "outcome": "draws",
+          "result": {
+            "winner": null,
+            "reason": "quiet"
+          },
+          "plies": 55
+        },
+        {
+          "seed": 1108,
+          "newActor": "computer",
+          "outcome": "wins",
+          "result": {
+            "winner": "computer",
+            "reason": "elimination"
+          },
+          "plies": 50
+        },
+        {
+          "seed": 1109,
+          "newActor": "human",
+          "outcome": "wins",
+          "result": {
+            "winner": "human",
+            "reason": "elimination"
+          },
+          "plies": 73
+        },
+        {
+          "seed": 1109,
+          "newActor": "computer",
+          "outcome": "losses",
+          "result": {
+            "winner": "human",
+            "reason": "elimination"
+          },
+          "plies": 61
+        },
+        {
+          "seed": 1110,
+          "newActor": "human",
+          "outcome": "losses",
+          "result": {
+            "winner": "computer",
+            "reason": "elimination"
+          },
+          "plies": 54
+        },
+        {
+          "seed": 1110,
+          "newActor": "computer",
+          "outcome": "wins",
+          "result": {
+            "winner": "computer",
+            "reason": "elimination"
+          },
+          "plies": 66
+        },
+        {
+          "seed": 1111,
+          "newActor": "human",
+          "outcome": "wins",
+          "result": {
+            "winner": "human",
+            "reason": "elimination"
+          },
+          "plies": 65
+        },
+        {
+          "seed": 1111,
+          "newActor": "computer",
+          "outcome": "draws",
+          "result": {
+            "winner": null,
+            "reason": "quiet"
+          },
+          "plies": 66
+        },
+        {
+          "seed": 1112,
+          "newActor": "human",
+          "outcome": "draws",
+          "result": {
+            "winner": null,
+            "reason": "quiet"
+          },
+          "plies": 71
+        },
+        {
+          "seed": 1112,
+          "newActor": "computer",
+          "outcome": "wins",
+          "result": {
+            "winner": "computer",
+            "reason": "last-clash"
+          },
+          "plies": 50
+        }
+      ],
+      "id": "stratified-equal150"
+    },
+    {
+      "configuration": {
+        "pairs": 6,
+        "seedStart": 2101,
+        "difficulty": "normal",
+        "oldDifficulty": "normal",
+        "newTime": "default",
+        "oldTime": "default",
+        "node": "v22.17.1"
+      },
+      "stats": {
+        "wins": 8,
+        "losses": 1,
+        "draws": 3,
+        "truncated": 0,
+        "newMoves": 364,
+        "oldMoves": 360,
+        "newTime": 127704.41056899997,
+        "oldTime": 2169.317376999914,
+        "newMax": 517.1828329999989,
+        "oldMax": 83.008709,
+        "scoreRate": 0.7916666666666666,
+        "newAverageMs": 350.8362927719779,
+        "oldAverageMs": 6.025881602777539,
+        "elapsedSeconds": 129.89395712500001
+      },
+      "games": [
+        {
+          "seed": 2101,
+          "newActor": "human",
+          "outcome": "wins",
+          "result": {
+            "winner": "human",
+            "reason": "elimination"
+          },
+          "plies": 57
+        },
+        {
+          "seed": 2101,
+          "newActor": "computer",
+          "outcome": "wins",
+          "result": {
+            "winner": "computer",
+            "reason": "elimination"
+          },
+          "plies": 48
+        },
+        {
+          "seed": 2102,
+          "newActor": "human",
+          "outcome": "wins",
+          "result": {
+            "winner": "human",
+            "reason": "elimination"
+          },
+          "plies": 63
+        },
+        {
+          "seed": 2102,
+          "newActor": "computer",
+          "outcome": "draws",
+          "result": {
+            "winner": null,
+            "reason": "repetition"
+          },
+          "plies": 82
+        },
+        {
+          "seed": 2103,
+          "newActor": "human",
+          "outcome": "losses",
+          "result": {
+            "winner": "computer",
+            "reason": "elimination"
+          },
+          "plies": 40
+        },
+        {
+          "seed": 2103,
+          "newActor": "computer",
+          "outcome": "wins",
+          "result": {
+            "winner": "computer",
+            "reason": "elimination"
+          },
+          "plies": 46
+        },
+        {
+          "seed": 2104,
+          "newActor": "human",
+          "outcome": "wins",
+          "result": {
+            "winner": "human",
+            "reason": "elimination"
+          },
+          "plies": 49
+        },
+        {
+          "seed": 2104,
+          "newActor": "computer",
+          "outcome": "draws",
+          "result": {
+            "winner": null,
+            "reason": "quiet"
+          },
+          "plies": 71
+        },
+        {
+          "seed": 2105,
+          "newActor": "human",
+          "outcome": "wins",
+          "result": {
+            "winner": "human",
+            "reason": "elimination"
+          },
+          "plies": 47
+        },
+        {
+          "seed": 2105,
+          "newActor": "computer",
+          "outcome": "wins",
+          "result": {
+            "winner": "computer",
+            "reason": "elimination"
+          },
+          "plies": 58
+        },
+        {
+          "seed": 2106,
+          "newActor": "human",
+          "outcome": "wins",
+          "result": {
+            "winner": "human",
+            "reason": "elimination"
+          },
+          "plies": 55
+        },
+        {
+          "seed": 2106,
+          "newActor": "computer",
+          "outcome": "draws",
+          "result": {
+            "winner": null,
+            "reason": "quiet"
+          },
+          "plies": 120
+        }
+      ],
+      "id": "default-normal"
+    }
+  ]
+}
