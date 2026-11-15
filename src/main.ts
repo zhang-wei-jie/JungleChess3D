@@ -256,7 +256,7 @@ function showDialog(kind: string, content = '') {
   if (kind === 'rules') { title = '森林对局指南'; body = RULES; footer = '<button class="wood-button primary-button" data-action="close">知道啦，去翻牌</button>'; }
   if (kind === 'settings') {
     title = '游戏设置';
-    body = `<div class="setting-row"><div><strong>棋盘音效</strong><p>让每一步都有小小的回应</p></div><button class="sound-switch" data-action="sound" aria-pressed="${audio.enabled}"><span data-sound-label>${audio.enabled ? '音效' : '静音'}</span></button></div><p class="rule-note">${settingsWritable ? '只记住难度和音效，不保存未完成棋局。' : '当前浏览器无法记住设置，本次选择仍然有效。'}</p>${session ? '<button class="wood-button" data-action="restart">重新开局</button>' : ''}`;
+    body = `<div class="setting-row"><div><strong>棋盘音效</strong><p>让每一步都有小小的回应</p></div><button class="sound-switch" data-action="sound" aria-pressed="${audio.enabled}"><span data-sound-label>${audio.enabled ? '音效' : '静音'}</span></button></div><p class="rule-note">${settingsWritable ? '只记住难度和音效，不保存未完成棋局。' : '当前浏览器无法记住设置，本次选择仍然有效。'}</p><p class="rule-note"><a href="./audio-credits.html" target="_blank" rel="noopener">动物音效来源与许可</a></p>${session ? '<button class="wood-button" data-action="restart">重新开局</button>' : ''}`;
     footer = '<button class="wood-button primary-button" data-action="close">回到森林</button>';
   }
   if (kind === 'exit' || kind === 'restart') {

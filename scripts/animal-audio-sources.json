@@ -1,0 +1,98 @@
+[
+  {
+    "rank": 1,
+    "animal": "鼠",
+    "title": "Field mouse sound",
+    "author": "SoundDino",
+    "source": "https://sounddino.com/en/effects/mouse/",
+    "download": "https://sounddino.com/mp3/18/field-mouse-sound.mp3",
+    "license": "SoundDino free commercial-use license",
+    "licenseUrl": "https://sounddino.com/",
+    "start": 3.8,
+    "duration": 0.85
+  },
+  {
+    "rank": 2,
+    "animal": "猫",
+    "title": "Meow of a pleading cat",
+    "author": "Heismark",
+    "source": "https://commons.wikimedia.org/wiki/File:Meow_of_a_pleading_cat.oga",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Meow_of_a_pleading_cat.oga",
+    "license": "Public domain (author dedication)",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:Meow_of_a_pleading_cat.oga",
+    "start": 3.55,
+    "duration": 1.4
+  },
+  {
+    "rank": 3,
+    "animal": "狗",
+    "title": "George vuf 1996",
+    "author": "Broadbeer",
+    "source": "https://commons.wikimedia.org/wiki/File:George_vuf_1996.ogg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/4/4c/George_vuf_1996.ogg",
+    "license": "Public domain (author dedication)",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:George_vuf_1996.ogg",
+    "start": 0,
+    "duration": 0.32
+  },
+  {
+    "rank": 4,
+    "animal": "狼",
+    "title": "Wolf howls",
+    "author": "U.S. Fish and Wildlife Service",
+    "source": "https://commons.wikimedia.org/wiki/File:Wolf_howls.ogg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/8/87/Wolf_howls.ogg",
+    "license": "Public domain (US government)",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:Wolf_howls.ogg",
+    "start": 0,
+    "duration": 2.1
+  },
+  {
+    "rank": 5,
+    "animal": "豹",
+    "title": "Short leopard sound",
+    "author": "SoundDino",
+    "source": "https://sounddino.com/en/effects/leopard/",
+    "download": "https://sounddino.com/mp3/30/short-leopard-sound.mp3",
+    "license": "SoundDino free commercial-use license",
+    "licenseUrl": "https://sounddino.com/",
+    "start": 0,
+    "duration": 0.768
+  },
+  {
+    "rank": 6,
+    "animal": "虎",
+    "title": "Roar of the tiger short sound",
+    "author": "SoundDino",
+    "source": "https://sounddino.com/en/effects/tiger/",
+    "download": "https://sounddino.com/mp3/30/roar-of-the-tiger-short-sound.mp3",
+    "license": "SoundDino free commercial-use license",
+    "licenseUrl": "https://sounddino.com/",
+    "start": 0,
+    "duration": 2.15
+  },
+  {
+    "rank": 7,
+    "animal": "狮",
+    "title": "Lion raring-sound1TamilNadu178",
+    "author": "த*உழவன் (Info-farmer)",
+    "source": "https://commons.wikimedia.org/wiki/File:Lion_raring-sound1TamilNadu178.ogg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Lion_raring-sound1TamilNadu178.ogg",
+    "license": "Public domain (author dedication)",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:Lion_raring-sound1TamilNadu178.ogg",
+    "start": 0.25,
+    "duration": 2.2
+  },
+  {
+    "rank": 8,
+    "animal": "象",
+    "title": "Elephant voice - trumpeting",
+    "author": "தகவலுழவன் (Info-farmer)",
+    "source": "https://commons.wikimedia.org/wiki/File:Elephant_voice_-_trumpeting.ogg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/4/40/Elephant_voice_-_trumpeting.ogg",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "start": 0.12,
+    "duration": 0.93
+  }
+]

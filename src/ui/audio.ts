@@ -1,10 +1,11 @@
 import type { Rank } from '../game/types';
-import { synthesizeAnimalCall } from './animal-calls';
+import recordings from './animal-recordings.json';
 
 export class GameAudio {
   private soundEnabled: boolean;
   private animalSource: AudioBufferSourceNode | null = null;
-  private animalBuffers = new Map<Rank, AudioBuffer>();
+  private animalBuffers = new Map<Rank, Promise<AudioBuffer | null>>();
+  private animalGeneration = 0;
   get enabled() { return this.soundEnabled; }
   set enabled(value: boolean) { this.soundEnabled = value; if (!value) this.stopAnimal(); }
   private context: AudioContext | null = null;
@@ -14,26 +15,34 @@ export class GameAudio {
     try {
       this.context ??= new AudioContext();
       if (this.context.state === 'suspended') void this.context.resume().catch(() => undefined);
+      this.prepareAnimals(this.context);
     } catch { /* 无音频设备时仍保留完整棋局操作。 */ }
   }
   stopAnimal() {
+    this.animalGeneration++;
     if (!this.animalSource) return;
     this.animalSource.stop(); this.animalSource.disconnect(); this.animalSource = null;
   }
-  playAnimal(rank: Rank) {
+  private prepareAnimals(ctx: AudioContext) {
+    for (let rank = 1; rank <= 8; rank++) {
+      const key = rank as Rank;
+      if (this.animalBuffers.has(key)) continue;
+      // Embedded MP3 recordings keep the first call and offline play network-free.
+      const bytes = Uint8Array.from(atob(recordings[key].mp3), char => char.charCodeAt(0));
+      this.animalBuffers.set(key, ctx.decodeAudioData(bytes.buffer).catch(() => null));
+    }
+  }
+  async playAnimal(rank: Rank) {
     if (!this.enabled) return;
     this.unlock();
     const ctx = this.context;
     if (!ctx || ctx.state !== 'running') return;
+    this.stopAnimal();
+    const generation = this.animalGeneration;
     try {
-      this.stopAnimal();
-      let buffer = this.animalBuffers.get(rank);
-      if (!buffer) {
-        const samples = synthesizeAnimalCall(rank, ctx.sampleRate);
-        buffer = ctx.createBuffer(1, samples.length, ctx.sampleRate);
-        buffer.getChannelData(0).set(samples);
-        this.animalBuffers.set(rank, buffer);
-      }
+      const buffer = await this.animalBuffers.get(rank);
+      // Never replay a late decode after mute, undo, exit or a newer reveal.
+      if (!buffer || !this.enabled || generation !== this.animalGeneration || ctx.state !== 'running') return;
       const source = ctx.createBufferSource();
       source.buffer = buffer; source.connect(ctx.destination);
       source.onended = () => { source.disconnect(); if (this.animalSource === source) this.animalSource = null; };
